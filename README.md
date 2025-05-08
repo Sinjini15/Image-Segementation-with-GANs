@@ -29,6 +29,24 @@ To address these challenges, I repurposed a StyleGAN-based foundation model with
 - Fine-tuned the model on a low-resource satellite dataset using a small number of annotated images
 - Evaluated performance using internal metrics such as mean IoU and class-wise accuracy
 
+  Public Dataset: Celeb-A Mask
+
+---
+
+## 🧩 Pipeline
+
+The generatore requires a latent code as input, which is generated using a pre-trained pSp inverter. Note - this is not retrained but just used in inference mode.
+
+During training, multiple instances of pre-existing segmentation masks from the dataset are used as "varied" instances for a single input image. This ensures the modified generator learns the segmentation mask as the required style. The output of the training stage is a segmented style mask for the input image.
+
+The training pipeline is as follows
+
+![Training image](training.png)
+
+During testing, sampling from the trained GAN generates the segementation as style for the test images. The metrics are then calculated as shown:
+
+![Testing pipeline](testing.png)
+
 ---
 
 ## 🚀 Outcomes
