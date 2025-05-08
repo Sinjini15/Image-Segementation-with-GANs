@@ -1,7 +1,5 @@
 # Image-Segementation-with-GANs
 
-# Satellite Image Segmentation with GANs (LLNL Internship, 2022)
-
 **Note:** This repository provides a high-level summary of a segmentation project conducted during my internship at Lawrence Livermore National Laboratory (LLNL) in 2022. Due to institutional policy, code and quantitative results are not publicly shareable.
 
 ---
@@ -41,7 +39,7 @@ During training, multiple instances of pre-existing segmentation masks from the 
 
 The training pipeline is as follows
 
-![Training image](Training_method,jpg)
+![Training image](Training_method.jpg)
 
 During testing, sampling from the trained GAN generates the segementation as style for the test images. The metrics are then calculated as shown:
 
