@@ -41,11 +41,11 @@ During training, multiple instances of pre-existing segmentation masks from the 
 
 The training pipeline is as follows
 
-![Training image](training.png)
+![Training image](Training_method,jpg)
 
 During testing, sampling from the trained GAN generates the segementation as style for the test images. The metrics are then calculated as shown:
 
-![Testing pipeline](testing.png)
+![Testing pipeline](Testing_method.jpg)
 
 ---
 
